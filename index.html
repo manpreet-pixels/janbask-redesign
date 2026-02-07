@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JanBask — WordPress Design</title>
     <link rel="stylesheet" href="style.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 <body class="antialiased text-gray-800 bg-white">
     <!-- Header -->
@@ -210,7 +208,7 @@
                         <p class="text-base text-gray-700 font-medium">
                             WordPress Website Design Company
                         </p>
-                        <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                        <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight" data-aos="fade-up" data-aos-delay="200">
                             Turn WordPress Into a Website Platform That Works for Your Business
                         </h1>
                     </div>
@@ -242,7 +240,7 @@
             
             <!-- Header -->
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-3xl font-bold text-blue-900 mb-5">
+                <h2 class="text-3xl lg:text-3xl font-bold text-blue-900 mb-5" data-aos="fade-up" data-aos-duration="800">
                     We Do It All - Simple Websites To Complex Digital Platforms
                 </h2>
                 <p class="text-2xl font-semibold text-gray-700 max-w-4xl mx-auto">
@@ -549,7 +547,7 @@
             
             <!-- Header -->
             <div class="text-center mb-12 lg:mb-16">
-                <h2 class="text-3xl lg:text-3xl font-bold text-blue-900 mb-5">
+                <h2 class="text-3xl lg:text-3xl font-bold text-blue-900 mb-5" data-aos="fade-up" data-aos-delay="100">
                     WordPress Experiences That Build Trust And Drive Action
                 </h2>
                 <p class="text-2xl font-semibold text-gray-700 max-w-4xl mx-auto">
@@ -564,7 +562,7 @@
                 <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 p-8 lg:p-10 min-h-[445px]">
                     <!-- Content -->
                     <div class="relative z-10 mb-8">
-                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 text-center">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up" data-aos-duration="800">
                             Brand Clarity
                         </h3>
                     </div>
@@ -580,7 +578,7 @@
                 <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-pink-50 to-red-50 p-8 lg:p-10 min-h-[445px]">
                     <!-- Content -->
                     <div class="relative z-10 mb-8 text-center">
-                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up" data-aos-delay="100">
                             User Experience
                         </h3>
                         <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
@@ -600,7 +598,7 @@
                 <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 p-8 lg:p-10 min-h-[445px]">
                     <!-- Content -->
                     <div class="relative z-10 mb-8 text-center">
-                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up" data-aos-delay="200">
                             User Journey
                         </h3>
                     </div>
@@ -628,7 +626,7 @@
                 <div class="md:col-span-8 col-span-12">
                     <div class="relative rounded-2xl p-8 lg:p-12">
                         <div class="max-w-4xl mx-auto">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-3">A Process Prescribed For Success.</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3" data-aos="fade-up" data-aos-duration="800">A Process Prescribed For Success.</h3>
                             <p class="text-gray-700 mb-8">We approach medical websites with the same precision you apply to patient care, diagnosing needs, planning the treatment, and delivering measurable results.</p>
 
                             <div class="relative">
@@ -951,6 +949,14 @@
         slidesPerView: 3,
       },
     },
+  });
+
+  // Initialize AOS (Animate On Scroll)
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 100
   });
     </script>
 </body>
