@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JanBask — WordPress Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+<body class="antialiased text-gray-800 bg-white">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold">
+                        <span class="text-gray-800">Jan</span><span class="text-red-600">Bask</span>
+                        <div class="text-xs tracking-widest text-gray-600 font-normal">DIGITAL DESIGN</div>
+                    </h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <a href="#" class="text-gray-800 hover:text-red-600 transition">Home</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-800 hover:text-red-600 transition flex items-center gap-1">
+                            Services
+                            <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2 z-50">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">WordPress Design</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">WordPress Development</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Migration Services</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Maintenance</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-800 hover:text-red-600 transition">About Us</a>
+                    
+                    <!-- Industries Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-800 hover:text-red-600 transition flex items-center gap-1">
+                            Industries
+                            <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2 z-50">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Healthcare</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">E-commerce</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Technology</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Finance</a>
+                        </div>
+                    </div>
+
+                    <!-- Resources Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-800 hover:text-red-600 transition flex items-center gap-1">
+                            Resources
+                            <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2 z-50">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Blog</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Case Studies</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">Documentation</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600">FAQs</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-800 hover:text-red-600 transition">Portfolio</a>
+                    <a href="#" class="text-gray-800 hover:text-red-600 transition">Contact Us</a>
+                </nav>
+
+                <!-- Right Side - CTA Button & Mobile Menu -->
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hidden lg:inline-block px-6 py-2 bg-red-600 text-white rounded-full text-sm font-medium hover:bg-red-700 transition">Get A Quote</a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 rounded hover:bg-gray-100 transition">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-50 rounded">Home</a>
+                
+                <!-- Mobile Services Dropdown -->
+                <div class="relative">
+                    <button id="mobile-services-btn" class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-50 rounded flex items-center justify-between">
+                        Services
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-services-menu" class="hidden bg-gray-50 rounded">
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">WordPress Design</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">WordPress Development</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Migration Services</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Maintenance</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-50 rounded">About Us</a>
+                
+                <!-- Mobile Industries Dropdown -->
+                <div class="relative">
+                    <button id="mobile-industries-btn" class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-50 rounded flex items-center justify-between">
+                        Industries
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-industries-menu" class="hidden bg-gray-50 rounded">
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Healthcare</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">E-commerce</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Technology</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Finance</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Resources Dropdown -->
+                <div class="relative">
+                    <button id="mobile-resources-btn" class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-50 rounded flex items-center justify-between">
+                        Resources
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resources-menu" class="hidden bg-gray-50 rounded">
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Blog</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Case Studies</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">Documentation</a>
+                        <a href="#" class="block py-2 px-8 text-gray-700 hover:text-red-600">FAQs</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-50 rounded">Portfolio</a>
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-50 rounded">Contact Us</a>
+                <a href="#" class="block py-2 px-4 mt-4 bg-red-600 text-white rounded-full text-center font-medium hover:bg-red-700 transition">Get A Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile Services dropdown
+        const mobileServicesBtn = document.getElementById('mobile-services-btn');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+        
+        mobileServicesBtn.addEventListener('click', () => {
+            mobileServicesMenu.classList.toggle('hidden');
+        });
+
+        // Mobile Industries dropdown
+        const mobileIndustriesBtn = document.getElementById('mobile-industries-btn');
+        const mobileIndustriesMenu = document.getElementById('mobile-industries-menu');
+        
+        mobileIndustriesBtn.addEventListener('click', () => {
+            mobileIndustriesMenu.classList.toggle('hidden');
+        });
+
+        // Mobile Resources dropdown
+        const mobileResourcesBtn = document.getElementById('mobile-resources-btn');
+        const mobileResourcesMenu = document.getElementById('mobile-resources-menu');
+        
+        mobileResourcesBtn.addEventListener('click', () => {
+            mobileResourcesMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Hero -->
+    <main>
+    <section class="relative overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-4 items-center py-16 lg:py-24">
+                
+                <!-- Left Content -->
+                <div class="space-y-8 bg-[#D9D9D9] rounded-md px-9 py-8 h-[470px]">
+                    <!-- Breadcrumb -->
+                    <nav class="text-sm text-gray-600">
+                        <span>Home / Industries / Real Estate Web Design Company</span>
+                    </nav>
+                    
+                    <!-- Heading -->
+                    <div class="space-y-4">
+                        <p class="text-base text-gray-700 font-medium">
+                            WordPress Website Design Company
+                        </p>
+                        <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                            Turn WordPress Into a Website Platform That Works for Your Business
+                        </h1>
+                    </div>
+                    
+                    <!-- Subheading -->
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Professional WordPress design and development services focused on performance, flexibility, and business continuity.
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <div>
+                        <button class="bg-gray-900 text-white px-10 py-3 rounded-full text-base font-medium hover:bg-gray-800 transition-colors shadow-lg">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Website Showcase -->
+                <div class="relative bg-[#2C2C2C] rounded-md overflow-hidden h-[470px]">
+                    <!-- Main container with perspective -->
+                    <img src="Images/girlimg.png" alt="girlwith" class="h-full w-full object-cover">
+                </div>
+        </div>
+    </section>
+
+     <!-- Services Section -->
+    <section class="pb-10 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-3xl font-bold text-blue-900 mb-5">
+                    We Do It All - Simple Websites To Complex Digital Platforms
+                </h2>
+                <p class="text-2xl font-semibold text-gray-700 max-w-4xl mx-auto">
+                    From WordPress design and development to customization, integrations, and ongoing support, we deliver solutions that scale with your business.
+                </p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                
+                <!-- Left Column - Services List -->
+                <div class="lg:col-span-1 space-y-6">
+                    
+                    <!-- Service 1 - WordPress Website Design (Expanded) -->
+                    <div class="border-b border-gray-300 pb-6">
+                        <button 
+                            class="accordion-trigger w-full text-left group"
+                            onclick="toggleAccordion(this)"
+                            aria-expanded="true"
+                        >
+                            <div class="flex items-start gap-4">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <path d="M9 3v18"/>
+                                        <path d="M14 8h5"/>
+                                        <path d="M14 12h5"/>
+                                        <path d="M14 16h5"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Title -->
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors">
+                                        WordPress Website Design
+                                    </h3>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Expandable Description -->
+                        <div class="accordion-content active pl-12 pt-3">
+                            <p class="text-gray-700 leading-relaxed">
+                                Custom-designed WordPress websites with responsive layouts, clear UX, and visuals aligned to your brand and business goals.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 2 - WordPress Migration -->
+                    <div class="border-b border-gray-300 pb-6">
+                        <button 
+                            class="accordion-trigger w-full text-left group"
+                            onclick="toggleAccordion(this)"
+                            aria-expanded="false"
+                        >
+                            <div class="flex items-start gap-4">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Title -->
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors">
+                                        WordPress Migration
+                                    </h3>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Expandable Description -->
+                        <div class="accordion-content pl-12 pt-3">
+                            <p class="text-gray-700 leading-relaxed">
+                                Seamlessly migrate your existing website to WordPress with zero downtime, preserving your SEO rankings and ensuring a smooth transition.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 3 - Custom WordPress Development -->
+                    <div class="pb-6">
+                        <button 
+                            class="accordion-trigger w-full text-left group"
+                            onclick="toggleAccordion(this)"
+                            aria-expanded="false"
+                        >
+                            <div class="flex items-start gap-4">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="16 18 22 12 16 6"/>
+                                        <polyline points="8 6 2 12 8 18"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Title -->
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors">
+                                        Custom WordPress Development
+                                    </h3>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Expandable Description -->
+                        <div class="accordion-content pl-12 pt-3">
+                            <p class="text-gray-700 leading-relaxed">
+                                Tailored WordPress solutions with custom plugins, themes, and functionality built specifically for your unique business requirements.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Center Column - Image -->
+                <div class="lg:col-span-1 flex items-center justify-center">
+                    <div class="relative">
+                        <!-- Background decorative elements -->
+                        <div class="absolute -top-8 -left-8 w-24 h-24 bg-blue-100 rounded-full opacity-50"></div>
+                        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-100 rounded-full opacity-30"></div>
+                        
+                        <!-- WordPress icons floating around -->
+                        <div class="absolute top-0 left-0 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-blue-500 animate-bounce" style="animation-duration: 3s;">
+                            <svg class="w-10 h-10 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.158 12.786L9.46 20.625c.806.237 1.657.366 2.54.366 1.047 0 2.051-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.763-7.572zm-5.43-3.13l3.033 8.28c-1.78-1.003-3.095-2.82-3.464-4.956-.095-.55-.144-1.118-.144-1.696 0-.828.097-1.633.28-2.408.19-.802.462-1.56.817-2.27L6.728 9.656zM14.903 7.88c.702 0 1.335-.055 1.335-.055.626-.037.555-.993-.075-.963 0 0-1.888.148-3.108.148-1.144 0-3.07-.148-3.07-.148-.63-.03-.702.963-.075.993 0 0 .592.055 1.217.055l1.81 4.968-2.543 7.622-4.228-12.59c.702 0 1.335-.055 1.335-.055.626-.037.555-.993-.075-.963 0 0-1.888.148-3.108.148-.22 0-.478-.006-.752-.014C5.583 3.962 8.625 2 12 2c2.55 0 4.87.976 6.615 2.575-.042-.003-.083-.005-.125-.005-1.144 0-1.954.993-1.954 2.06 0 .958.554 1.77 1.144 2.728.462.77.998 1.76.998 3.19 0 .993-.382 2.146-.883 3.75l-1.158 3.87-4.213-12.29zm7.26-.926C21.947 8.14 22 9.333 22 10.5c0 1.036-.098 2.205-.384 3.644l-1.544 5.463c-1.526 2.402-4.196 3.988-7.246 3.988-3.06 0-5.737-1.593-7.26-3.993l3.97-11.51c.74-1.86 1.95-3.764 3.61-3.764 1.66 0 2.87 1.904 3.61 3.764l1.54 4.465z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="absolute top-12 right-0 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-blue-300">
+                            <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="absolute bottom-8 left-4 w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-blue-200">
+                            <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Main image placeholder -->
+                        <div class="relative z-10 w-72 h-80 bg-gradient-to-br from-blue-50 to-gray-100 rounded-3xl shadow-2xl overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <img src="Images/devimg.png" alt="Developer working on laptop" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Services List -->
+                <div class="lg:col-span-1 space-y-6">
+                    
+                    <!-- Service 4 - Third-Party Integrations -->
+                    <div class="border-b border-gray-300 pb-6">
+                        <button 
+                            class="accordion-trigger w-full text-left group"
+                            onclick="toggleAccordion(this)"
+                            aria-expanded="false"
+                        >
+                            <div class="flex items-start gap-4">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                        <path d="M2 12h20"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Title -->
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors">
+                                        Third-Party Integrations
+                                    </h3>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Expandable Description -->
+                        <div class="accordion-content pl-12 pt-3">
+                            <p class="text-gray-700 leading-relaxed">
+                                Connect your WordPress site with essential tools like CRMs, payment gateways, marketing platforms, and analytics for streamlined operations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 5 - WooCommerce Customization -->
+                    <div class="border-b border-gray-300 pb-6">
+                        <button 
+                            class="accordion-trigger w-full text-left group"
+                            onclick="toggleAccordion(this)"
+                            aria-expanded="false"
+                        >
+                            <div class="flex items-start gap-4">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="9" cy="21" r="1"/>
+                                        <circle cx="20" cy="21" r="1"/>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Title -->
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors">
+                                        WooCommerce Customization
+                                    </h3>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Expandable Description -->
+                        <div class="accordion-content pl-12 pt-3">
+                            <p class="text-gray-700 leading-relaxed">
+                                Build powerful e-commerce stores with custom WooCommerce features, payment options, and shopping experiences tailored to your customers.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 6 - Landing Page Design -->
+                    <div class="border-b border-gray-300 pb-6">
+                        <button 
+                            class="accordion-trigger w-full text-left group"
+                            onclick="toggleAccordion(this)"
+                            aria-expanded="false"
+                        >
+                            <div class="flex items-start gap-4">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                        <path d="M8 21h8"/>
+                                        <path d="M12 17v4"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Title -->
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors">
+                                        Landing Page Design
+                                    </h3>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Expandable Description -->
+                        <div class="accordion-content pl-12 pt-3">
+                            <p class="text-gray-700 leading-relaxed">
+                                High-converting landing pages optimized for your campaigns, with compelling copy, strategic CTAs, and conversion-focused design.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 7 - WordPress Maintenance and Support -->
+                    <div class="pb-6">
+                        <button 
+                            class="accordion-trigger w-full text-left group"
+                            onclick="toggleAccordion(this)"
+                            aria-expanded="false"
+                        >
+                            <div class="flex items-start gap-4">
+                                <!-- Icon -->
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                        <path d="M8 10h.01"/>
+                                        <path d="M12 10h.01"/>
+                                        <path d="M16 10h.01"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Title -->
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-800 transition-colors">
+                                        WordPress Maintenance and Support
+                                    </h3>
+                                </div>
+                            </div>
+                        </button>
+                        
+                        <!-- Expandable Description -->
+                        <div class="accordion-content pl-12 pt-3">
+                            <p class="text-gray-700 leading-relaxed">
+                                Ongoing maintenance, updates, security monitoring, and technical support to keep your WordPress site running smoothly and securely.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+     <!-- WordPress Experiences Section -->
+    <section class="py-16 px-6 lg:py-24 lg:px-8 bg-[#FFFDF6]">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl lg:text-3xl font-bold text-blue-900 mb-5">
+                    WordPress Experiences That Build Trust And Drive Action
+                </h2>
+                <p class="text-2xl font-semibold text-gray-700 max-w-4xl mx-auto">
+                    A successful WordPress website does more than look good. It communicates clearly, guides users confidently, and supports meaningful business engagement.
+                </p>
+            </div>
+            
+            <!-- Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Card 1 - Brand Clarity -->
+                <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 p-8 lg:p-10 min-h-[445px]">
+                    <!-- Content -->
+                    <div class="relative z-10 mb-8">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 text-center">
+                            Brand Clarity
+                        </h3>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2  w-[200px] h-[200px] bottom-0 bg-blue-700 rounded-full"></div>
+                    
+                    <!-- Image Composition -->
+                   <div class="absolute w-[80%] mx-auto bottom-0  ">
+                    <img src="Images/bradning.png" alt="Brand clarity illustration" class="w-full h-full">
+                   </div>
+                </div>
+                
+                <!-- Card 2 - User Experience -->
+                <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-pink-50 to-red-50 p-8 lg:p-10 min-h-[445px]">
+                    <!-- Content -->
+                    <div class="relative z-10 mb-8 text-center">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                            User Experience
+                        </h3>
+                        <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
+                            Clear structure and intuitive navigation help users find information quickly and move forward with confidence.
+                        </p>
+                    </div>
+                    
+                    <div class="absolute left-1/2 transform -translate-x-1/2  w-[200px] h-[200px] bottom-0 bg-blue-700 rounded-full"></div>
+                    
+                    <!-- Image Composition -->
+                   <div class="absolute w-[80%] mx-auto bottom-0  ">
+                    <img src="Images/bradning.png" alt="Brand clarity illustration" class="w-full h-full">
+                   </div>
+                </div>
+                
+                <!-- Card 3 - User Journey -->
+                <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 p-8 lg:p-10 min-h-[445px]">
+                    <!-- Content -->
+                    <div class="relative z-10 mb-8 text-center">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                            User Journey
+                        </h3>
+                    </div>
+                    
+                    <div class="absolute left-1/2 transform -translate-x-1/2  w-[200px] h-[200px] bottom-0 bg-blue-700 rounded-full"></div>
+                    
+                    <!-- Image Composition -->
+                   <div class="absolute w-[80%] mx-auto bottom-0  ">
+                    <img src="Images/bradning.png" alt="Brand clarity illustration" class="w-full h-full">
+                   </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="relative bg-[#F0FBFF]">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-12">
+                <div class="md:col-span-4 col-span-12">
+                    <img src="Images/screens.png" alt="screens">
+                </div>
+                <!-- ---Right Content Area  -->
+                <div class="md:col-span-8 col-span-12">
+                    <div class="relative rounded-2xl p-8 lg:p-12">
+                        <div class="max-w-4xl mx-auto">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3">A Process Prescribed For Success.</h3>
+                            <p class="text-gray-700 mb-8">We approach medical websites with the same precision you apply to patient care, diagnosing needs, planning the treatment, and delivering measurable results.</p>
+
+                            <div class="relative">
+                                <div class="md:block hidden absolute top-8 bottom-8 left-1/2 w-px bg-gray-300 -translate-x-1/2"></div>
+
+                                <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
+                                    <!-- Left column items -->
+                                    <div class="space-y-6 pr-6">
+                                        <div class="flex items-start gap-4">
+                                            <div class="flex-shrink-0 relative">
+                                                <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center border border-gray-200">
+                                                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M3 12h18M3 17h18"/></svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900">Non-WordPress CMS Migration</h4>
+                                                <p class="text-sm text-gray-600">Seamlessly move your site from platforms like Wix, Squarespace, or Shopify.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-start gap-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center border border-gray-200">
+                                                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c2.21 0 4-1.79 4-4S14.21 3 12 3 8 4.79 8 7s1.79 4 4 4zM6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900">Database Migration</h4>
+                                                <p class="text-sm text-gray-600">Transfer all your data safely while maintaining integrity.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-start gap-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center border border-gray-200">
+                                                    <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M6 11h12M10 15h4"/></svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900">Hosting & Domain Migration</h4>
+                                                <p class="text-sm text-gray-600">Move your hosting and domain setup without disruption.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-start gap-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center border border-gray-200">
+                                                    <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3"/></svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900">Version Upgrade</h4>
+                                                <p class="text-sm text-gray-600">Update WordPress to the latest version for security and performance.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right column items -->
+                                    <div class="space-y-6 md:pl-6 pl-0">
+                                        <div class="flex items-start gap-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center border border-gray-200">
+                                                    <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900">Content & Template Migration</h4>
+                                                <p class="text-sm text-gray-600">Preserve pages, media, and designs with zero data loss.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-start gap-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center border border-gray-200">
+                                                    <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M3 12h18M3 17h18"/></svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900">Reconfiguration & Optimization</h4>
+                                                <p class="text-sm text-gray-600">Adjust settings and structure to suit the new environment.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-start gap-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="w-12 h-12 bg-white rounded-full shadow flex items-center justify-center border border-gray-200">
+                                                    <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900">Website Backup & Transfer</h4>
+                                                <p class="text-sm text-gray-600">Full backup before migration ensures safety and peace of mind.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 lg:py-24 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl lg:text-3xl font-bold text-blue-900 mb-5">
+                    Go Beyond Templates With Wordpress Custom Features
+                </h2>
+                <p class="text-2xl font-semibold text-gray-700 max-w-4xl mx-auto">
+                    From unique features to seamless integrations, we create WordPress websites tailored to your business workflows and growth goals.
+                </p>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                
+                <!-- Card 1 - WordPress Built to Match (Red by default) -->
+                <div class="bg-red-700 rounded-2xl p-8 lg:p-10 transition-all duration-300 hover:scale-105 group">
+                    <!-- Icon -->
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-bold mb-4 text-white">
+                        WordPress Built to Match Your Business Process, Not a Template.
+                    </h3>
+                </div>
+                
+                <!-- Card 2 - Custom Functionality -->
+                <div class="bg-gray-100 hover:bg-red-700 rounded-2xl p-8 lg:p-10 transition-all duration-300 hover:scale-105 group">
+                    <!-- Icon -->
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-gray-800 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 13a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6z"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 group-hover:text-white transition-colors duration-300">
+                        Custom Functionality
+                    </h3>
+                    
+                    <!-- Description -->
+                    <p class="text-base leading-relaxed text-gray-600 group-hover:text-white transition-colors duration-300">
+                        Purpose-built UI and backend features tailored to your business workflows, supported by custom plugins and extensions.
+                    </p>
+                </div>
+                
+                <!-- Card 3 - Complex Integrations -->
+                <div class="bg-gray-100 hover:bg-red-700 rounded-2xl p-8 lg:p-10 transition-all duration-300 hover:scale-105 group">
+                    <!-- Icon -->
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-gray-800 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            <rect x="9" y="7" width="6" height="4" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 group-hover:text-white transition-colors duration-300">
+                        Complex Integrations
+                    </h3>
+                    
+                    <!-- Description -->
+                    <p class="text-base leading-relaxed text-gray-600 group-hover:text-white transition-colors duration-300">
+                        Connect your website with CRMs, marketing platforms, payment systems, ERPs, and other tools to create a seamless workflow.
+                    </p>
+                </div>
+                
+                <!-- Card 4 - Workflow Automation -->
+                <div class="bg-gray-100 hover:bg-red-700 rounded-2xl p-8 lg:p-10 transition-all duration-300 hover:scale-105 group">
+                    <!-- Icon -->
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-gray-800 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            <circle cx="17" cy="7" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 10v3"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 group-hover:text-white transition-colors duration-300">
+                        Workflow Automation
+                    </h3>
+                    
+                    <!-- Description -->
+                    <p class="text-base leading-relaxed text-gray-600 group-hover:text-white transition-colors duration-300">
+                        Automate repetitive tasks, approvals, and processes so your website not only looks good but works smarter for your business.
+                    </p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="relative w-full bg-black text-white">
+    
+        <div class="swiper industrySwiper">
+    
+            <div class="swiper-wrapper">
+    
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-black/60 z-10"></div>
+    
+                    <img src="your-image1.jpg" class="w-full h-[600px] object-cover" />
+    
+                    <div class="absolute top-16 left-16 z-20">
+                        <h2 class="text-5xl font-bold">Industries</h2>
+                    </div>
+    
+                    <div class="absolute bottom-16 left-16 z-20 max-w-sm">
+                        <h3 class="text-xl font-bold">NonProfits</h3>
+                        <p class="text-sm mt-2 opacity-90">
+                            We understand nonprofits — that’s why our digital solutions balance
+                            budget, functionality, and heart.
+                        </p>
+    
+                        <a href="#" class="text-yellow-400 mt-3 inline-block">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Slide 2 -->
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-black/60 z-10"></div>
+    
+                    <img src="your-image2.jpg" class="w-full h-[600px] object-cover" />
+    
+                    <div class="absolute bottom-16 left-16 z-20">
+                        <h3 class="text-xl font-bold">Finance</h3>
+                    </div>
+                </div>
+    
+                <!-- Slide 3 -->
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-black/60 z-10"></div>
+    
+                    <img src="your-image3.jpg" class="w-full h-[600px] object-cover" />
+    
+                    <div class="absolute bottom-16 left-16 z-20">
+                        <h3 class="text-xl font-bold">Education</h3>
+                    </div>
+                </div>
+    
+                <!-- Slide 4 -->
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-black/60 z-10"></div>
+    
+                    <img src="your-image4.jpg" class="w-full h-[600px] object-cover" />
+    
+                    <div class="absolute bottom-16 left-16 z-20">
+                        <h3 class="text-xl font-bold">Life Science & Pharma</h3>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- Navigation -->
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+    
+        </div>
+    </section>
+
+    </main>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other accordions in the same parent container
+            const parent = button.closest('.space-y-6');
+            const allButtons = parent.querySelectorAll('.accordion-trigger');
+            const allContents = parent.querySelectorAll('.accordion-content');
+            
+            allButtons.forEach(btn => {
+                btn.setAttribute('aria-expanded', 'false');
+            });
+            
+            allContents.forEach(cnt => {
+                cnt.classList.remove('active');
+            });
+            
+            // Toggle current accordion
+            if (!isExpanded) {
+                button.setAttribute('aria-expanded', 'true');
+                content.classList.add('active');
+            }
+        }
+
+        // ---Swiper Initialization---
+         const swiper = new Swiper(".industrySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    loop: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+    </script>
+</body>
+</html>
